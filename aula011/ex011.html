@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: 20pt arial;
+            text-align: center;
+            padding: 10px;
+        }
+        input {
+            font: normal 20pt arial;
+            width: 400px;
+        }
+        
+        #res {
+
+        font-size: 42px;
+        line-height: 52px;
+        font-weight: arial;
+        }
+        div {
+            padding: 40px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Descubra sua Nacionalidade</h1>
+    Qual país você nasceu : <input type="text" name="país" id='país'/>
+    <input type='button' value="Verificar" onclick="calcular()"/>
+    <div id='res'>
+
+    </div>
+
+    
+    <script>
+       function calcular() {
+       
+        var pas = window.document.getElementById ('país')
+        var res = window.document.getElementById ('res')
+        var fin = (pas.value)
+        res.innerText = `O seu país de origem é ${fin} `
+        if (fin == 'Brasil') {
+            res.innerHTML += ("<p>Sua nacionalidade é <strong>Brasileira</strong></P>")
+            
+        } 
+        else {
+            res.innerHTML += ("<p>Você é <strong>estrangeiro</strong></p>")
+        }
+
+       }
+
+
+    </script>
+
+</body>
+</html>
